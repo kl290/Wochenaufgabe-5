@@ -1,0 +1,5 @@
+print("Durchschnittsberechner")
+Zahl = input("Bitte gib die Zahlen ein, getrennt durch Leerzeichen:")
+Zahlenliste = list(map(float, Zahl.split()))
+durchschnitt = sum(Zahlenliste) / len(Zahlenliste)
+print(f"Der Durchschnitt der eingegebenen Zahlen ist: {durchschnitt}")
