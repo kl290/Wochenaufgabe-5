@@ -1,1 +1,1 @@
- #Guten Morgen
+print("Multiplikationstabelle")
