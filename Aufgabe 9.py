@@ -12,3 +12,4 @@ if Zahl > 100:
     print ("ungültige Zahl")
 elif Zahl < 1:
     print("ungültige Zeit")
+    
