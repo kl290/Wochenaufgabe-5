@@ -3,17 +3,17 @@ while True:
     eingabe1 = input("Gib die erste zahl ein: ")
     eingabe2 = input("Gib die zweite zahl ein: ")
     try:
-        zahl1 = float(eingabe1)
-        zahl2 = float(eingabe2)
-        ergebnis = zahl1 + zahl2
-        print(f"{zahl1} + {zahl2} = {ergebnis}")
-        ergebnis = zahl1 - zahl2
-        print(f"{zahl1} - {zahl2} = {ergebnis}")
-        ergebnis = zahl1 * zahl2
-        print(f"{zahl1} * {zahl2} = {ergebnis}")
-        ergebnis = zahl1 / zahl2
-        print(f"{zahl1} / {zahl2} = {ergebnis}")
+        Zahl1 = float(eingabe1)
+        Zahl2 = float(eingabe2)
+        ergebnis = Zahl1 + Zahl2
+        print(f"{Zahl1} + {Zahl2} = {ergebnis}")
+        ergebnis = Zahl1 - Zahl2
+        print(f"{Zahl1} - {Zahl2} = {ergebnis}")
+        ergebnis = Zahl1 * Zahl2
+        print(f"{Zahl1} * {Zahl2} = {ergebnis}")
+        ergebnis = Zahl1 / Zahl2
+        print(f"{Zahl1} / {Zahl2} = {ergebnis}")
         break
     except ValueError :
-        print("Ungültige Operation. Bitte eine zahl eingeben!")
+        print("Ungültige Eingabe. Bitte eine zahl eingeben!")
 
