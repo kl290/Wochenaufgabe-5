@@ -3,7 +3,7 @@ while True:
     try:
         Punktzahl= int(input("Bitte geben Sie Ihre Punktzahl (0-100) an: "))
         if  100 < Punktzahl or 0> Punktzahl:
-            print("ungültige Punktzahl")
+            print("Ungültige Punktzahl")
         elif Punktzahl > 89:
             print("Sehr gut")
             break
