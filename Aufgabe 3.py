@@ -1,19 +1,13 @@
 print("Dieser Rechner berechent die Summe, Differenz, Multiplikation und die Division von 2 Zahlen die Sie eingeben können.")
 while True:
-    eingabe1 = input("Gib die erste zahl ein: ")
-    eingabe2 = input("Gib die zweite zahl ein: ")
+    Zahl1 = float(input("Gib die erste Zahl ein: "))
+    Zahl2 = float(input("Gib die zweite Zahl ein: "))
     try:
-        Zahl1 = float(eingabe1)
-        Zahl2 = float(eingabe2)
-        ergebnis = Zahl1 + Zahl2
-        print(f"{Zahl1} + {Zahl2} = {ergebnis}")
-        ergebnis = Zahl1 - Zahl2
-        print(f"{Zahl1} - {Zahl2} = {ergebnis}")
-        ergebnis = Zahl1 * Zahl2
-        print(f"{Zahl1} * {Zahl2} = {ergebnis}")
-        ergebnis = Zahl1 / Zahl2
-        print(f"{Zahl1} / {Zahl2} = {ergebnis}")
+        Ergebnis = Zahl1 + Zahl2
+        print(f"{Zahl1} + {Zahl2} = {Ergebnis}")
+        print(f"{Zahl1} - {Zahl2} = {Ergebnis}")
+        print(f"{Zahl1} * {Zahl2} = {Ergebnis}")
+        print(f"{Zahl1} / {Zahl2} = {Ergebnis}")
         break
     except ValueError :
-        print("Ungültige Eingabe. Bitte eine zahl eingeben!")
-
+        print("Ungültige Eingabe. Bitte eine Zahl eingeben!")
