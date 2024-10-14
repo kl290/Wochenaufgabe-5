@@ -1,24 +1,25 @@
-print("Noten-Berechnung")
-while True:
+def note_berechnen(punkt):
+    if 90 <= punkte <= 100:
+        return "Sehr gut"
+    elif 80 <= punkte < 90:
+        return "Gut"
+    elif 70 <= punkte < 80:
+        return "Befriedigend"
+    elif 60 <= punkte < 70:
+        return "Ausreichend"
+    else:
+        return "Nicht bestanden"
+
+
+gueltige_eingabe = False
+
+while not gueltige_eingabe:
     try:
-        Punktzahl = int(input("Bitte geben Sie Ihre Punktzahl (0-100) an: "))
-        if 100 < Punktzahl or 0 > Punktzahl:
-            print("Die Punktzahl muss zwischen 1 und 100 liegen. Versuch es nochmal.")
-            continue
-        elif Punktzahl > 89:
-            print("Sehr gut")
-            break
-        elif Punktzahl > 79:
-            print("Gut")
-            break
-        elif Punktzahl > 69:
-            print("Befriedigend")
-            break
-        elif Punktzahl > 59:
-            print("Ausreichend")
-            break
-        if 0 < Punktzahl < 60:
-            print("Nicht bestanden")
-            break
+        punkte = float(input("Geben Sie eine Punktezahl zwischen 0 und 100 ein: "))
+        if 0 <= punkte <= 100:
+            gueltige_eingabe = True
+            print(f"Die Note lautet: {note_berechnen(punkte)}")
+        else:
+            print("Ungültige Eingabe. Die Zahl muss zwischen 0 und 100 liegen.")
     except ValueError:
-        print("Ungültige Eingabe. Bitte gib eine Zahl ein!")
+        print("Ungültige Eingabe. Bitte geben Sie eine Zahl ein.")
