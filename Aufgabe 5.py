@@ -1,8 +1,8 @@
 print("Noten-Berechnung")
 while True:
     try:
-        Punktzahl= int(input("Bitte geben Sie Ihre Punktzahl (0-100) an: "))
-        if  100 < Punktzahl or 0 > Punktzahl:
+        Punktzahl = int(input("Bitte geben Sie Ihre Punktzahl (0-100) an: "))
+        if 100 < Punktzahl or 0 > Punktzahl:
             print("Die Punktzahl muss zwischen 1 und 100 liegen. Versuch es nochmal.")
             continue
         elif Punktzahl > 89:
@@ -20,5 +20,5 @@ while True:
         if 0 < Punktzahl < 60:
             print("Nicht bestanden")
             break
-    except ValueError :
+    except ValueError:
         print("Ungültige Eingabe. Bitte gib eine Zahl ein!")
