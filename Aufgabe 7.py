@@ -1,15 +1,23 @@
 print("Multiplikationstabelle ( kleines 1-mal-1 )")
 
 
-def zahl_eingeben():
+def eingabe_zahlen():
     while True:
+        eingabe = input("Bitte gib die Zahlen ein, getrennt durch Leerzeichen: ").strip()
+
+        if not eingabe:
+            print("Es wurden keine Zahlen eingegeben. Bitte versuche es erneut.")
+            continue
+
         try:
-            return int(input("Bitte gib eine Zahl ein: "))
+            return list(map(float, eingabe.split()))
         except ValueError:
-            print("Fehler: Bitte gib eine gültige Zahl ein!")
+            print("Fehler: Du hast einen Buchstaben oder ungültige Zeichen eingegeben.", end="")
+            print("Bitte gib nur Zahlen ein, getrennt durch Leerzeichen.")
+            print("Durchschnittsberechner")
 
 
-zahl = zahl_eingeben()
+zahlen = eingabe_zahlen()
 
-for i in range(1, 11):
-    print(f"{zahl} * {i} = {zahl * i}")
+durchschnitt = sum(zahlen) / len(zahlen)
+print(f"Der Durchschnitt der eingegebenen Zahlen ist: {durchschnitt}")
