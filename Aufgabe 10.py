@@ -10,6 +10,24 @@ def eingabe_zahl(prompt):
             print("Ungültige Eingabe. Bitte gib eine gültige Zahl ein.")
 
 
+def addition(zahl1, zahl2):
+    return zahl1 + zahl2
+
+
+def subtraktion(zahl1, zahl2):
+    return zahl1 - zahl2
+
+
+def multiplikation(zahl1, zahl2):
+    return zahl1 * zahl2
+
+
+def division(zahl1, zahl2):
+    if zahl2 == 0:
+        raise ValueError("Division durch Null ist nicht erlaubt.")
+    return zahl1 / zahl2
+
+
 def taschenrechner():
     while True:
         operation = input("Wähle die Grundrechenart (+, -, *, /): ")
@@ -21,16 +39,18 @@ def taschenrechner():
         zahl1 = eingabe_zahl("Gib die erste Zahl ein: ")
         zahl2 = eingabe_zahl("Gib die zweite Zahl ein: ")
 
-        if operation == "/" and zahl2 == 0:
-            print("Fehler: Division durch Null ist nicht erlaubt.")
+        try:
+            if operation == "+":
+                ergebnis = addition(zahl1, zahl2)
+            elif operation == "-":
+                ergebnis = subtraktion(zahl1, zahl2)
+            elif operation == "*":
+                ergebnis = multiplikation(zahl1, zahl2)
+            elif operation == "/":
+                ergebnis = division(zahl1, zahl2)
+        except ValueError as e:
+            print(e)
             continue
-
-        ergebnis = {
-            "+": zahl1 + zahl2,
-            "-": zahl1 - zahl2,
-            "*": zahl1 * zahl2,
-            "/": zahl1 / zahl2
-        }[operation]
 
         print(f"Das Ergebnis ist: {ergebnis}")
         break
