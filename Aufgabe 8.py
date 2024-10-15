@@ -1,20 +1,23 @@
 print("Durchschnittsberechner")
 
-while True:
-    try:
-        eingabe = input("Bitte gib die Zahlen ein, getrennt durch Leerzeichen: ")
 
-        zahlen_liste = list(map(float, eingabe.split()))
+def eingabe_zahlen():
+    while True:
+        eingabe = input("Bitte gib die Zahlen ein, getrennt durch Leerzeichen: ").strip()
 
-        if not zahlen_liste:
+        if not eingabe:
             print("Es wurden keine Zahlen eingegeben. Bitte versuche es erneut.")
             continue
 
-        durchschnitt = sum(zahlen_liste) / len(zahlen_liste)
+        try:
+            return list(map(float, eingabe.split()))
+        except ValueError:
+            print("Fehler: Du hast einen Buchstaben oder ungültige Zeichen eingegeben.", end="")
+            print("Bitte gib nur Zahlen ein, getrennt durch Leerzeichen.")
+            print("Durchschnittsberechner")
 
-        print(f"Der Durchschnitt der eingegebenen Zahlen ist: {durchschnitt}")
-        break
 
-    except ValueError:
-        print("Fehler: Du hast einen Buchstaben oder ungültige Zeichen eingegeben. Bitte gib nur Zahlen ein, ", end= "")
-        print("getrennt durch Leerzeichen.")
+zahlen = eingabe_zahlen()
+
+durchschnitt = sum(zahlen) / len(zahlen)
+print(f"Der Durchschnitt der eingegebenen Zahlen ist: {durchschnitt}")
