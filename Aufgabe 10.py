@@ -1,48 +1,39 @@
-# Funktionen für die Grundrechenarten
 print("Taschenrechner!")
-print("Dieser Rechner kann die Addition,Subtraktion,Multiplikation und Division zweier Zahlen berechnen.")
+print("Berechnungen: +, -, *, /")
 
 
-def addition(x, y):
-    return x + y
+def eingabe_zahl(prompt):
+    while True:
+        try:
+            return float(input(prompt))
+        except ValueError:
+            print("Ungültige Eingabe. Bitte gib eine gültige Zahl ein.")
 
 
-def subtraktion(x, y):
-    return x - y
-
-
-def multiplikation(x, y):
-    return x * y
-
-
-def division(x, y):
-    return x / y
-
-
-# Rechenprogramm
 def taschenrechner():
-    print("Wähle die Grundrechenart: ")
-    print("+")
-    print("-")
-    print("*")
-    print("/")
+    while True:
+        operation = input("Wähle die Grundrechenart (+, -, *, /): ")
+
+        if operation not in ["+", "-", "*", "/"]:
+            print("Ungültige Auswahl. Bitte versuche es erneut.")
+            continue
+
+        zahl1 = eingabe_zahl("Gib die erste Zahl ein: ")
+        zahl2 = eingabe_zahl("Gib die zweite Zahl ein: ")
+
+        if operation == "/" and zahl2 == 0:
+            print("Fehler: Division durch Null ist nicht erlaubt.")
+            continue
+
+        ergebnis = {
+            "+": zahl1 + zahl2,
+            "-": zahl1 - zahl2,
+            "*": zahl1 * zahl2,
+            "/": zahl1 / zahl2
+        }[operation]
+
+        print(f"Das Ergebnis ist: {ergebnis}")
+        break
 
 
-auswahl = input("Wähle die gewünschte Grundrechenart (+,-,*,/): ")
-zahl1 = float(input("Gib die erste zahl ein:"))
-zahl2 = float(input("Gib die zweite Zahl ein:"))
-
-if auswahl == "+":
-    ergebnis = zahl1 + zahl2
-    print(f"{zahl1} + {zahl2} = {ergebnis}")
-elif auswahl == "-":
-    ergebnis = zahl1 - zahl2
-    print(f"{zahl1} - {zahl2} = {ergebnis}")
-elif auswahl == "*":
-    ergebnis = zahl1 * zahl2
-    print(f"{zahl1} * {zahl2} = {ergebnis}")
-elif auswahl == "/":
-    ergebnis = zahl1 / zahl2
-    print(f"{zahl1} / {zahl2} = {ergebnis}")
-else:
-    print("ungültige Auswahl")
+taschenrechner()
