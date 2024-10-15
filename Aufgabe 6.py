@@ -3,11 +3,9 @@ import random
 
 def zahl_raten():
     zufallszahl = random.randint(1, 100)
-    geraten = False
-
     print("Ich habe eine Zahl zwischen 1 und 100 gewählt. Versuche, sie zu erraten!")
 
-    while nicht_geraten(geraten):
+    while True:
         try:
             rateversuch = int(input("Gib deine Schätzung ein: "))
 
@@ -19,13 +17,9 @@ def zahl_raten():
                 print("Zu hoch!")
             else:
                 print("Glückwunsch! Du hast die richtige Zahl erraten.")
-                geraten = True
+                break
         except ValueError:
             print("Bitte gib eine gültige Zahl ein.")
-
-
-def nicht_geraten(geraten):
-    return not geraten
 
 
 zahl_raten()
