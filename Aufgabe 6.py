@@ -1,6 +1,7 @@
 import random
 
-def zahlen_raten():
+
+def zahl_raten():
     zufallszahl = random.randint(1, 100)
     geraten = False
 
@@ -25,3 +26,6 @@ def zahlen_raten():
 
 def nicht_geraten(geraten):
     return not geraten
+
+
+zahl_raten()
