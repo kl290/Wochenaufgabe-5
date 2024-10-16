@@ -22,3 +22,6 @@ elif 60 <= punkte < 70:
     print("Die Note lautet: Ausreichend")
 else:
     print("Die Note lautet: Nicht bestanden")
+
+
+
