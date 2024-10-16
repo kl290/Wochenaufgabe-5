@@ -12,15 +12,15 @@ def punkt_eingabe():
 
 punkte = punkt_eingabe()
 
-if 90 <= punkte <= 100:
+if   punkte > 89:
     print("Die Note lautet: Sehr gut")
-elif 80 <= punkte < 90:
+elif punkte > 79:
     print("Die Note lautet: Gut")
-elif 70 <= punkte < 80:
+elif punkte > 69:
     print("Die Note lautet: Befriedigend")
-elif 60 <= punkte < 70:
+elif punkte > 59:
     print("Die Note lautet: Ausreichend")
-else:
+elif punkte < 60:
     print("Die Note lautet: Nicht bestanden")
 
 
