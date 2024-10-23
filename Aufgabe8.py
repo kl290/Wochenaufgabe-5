@@ -13,8 +13,7 @@ def eingabe_zahlen():
             return list(map(float, eingabe.split()))
         except ValueError:
             print("Fehler: Du hast einen Buchstaben oder ungültige Zeichen eingegeben.", end="")
-            print("Bitte gib nur Zahlen ein, getrennt durch Leerzeichen.")
-            print("Durchschnittsberechner")
+            print(" Bitte gib nur Zahlen ein, getrennt durch Leerzeichen.")
 
 
 zahlen = eingabe_zahlen()
