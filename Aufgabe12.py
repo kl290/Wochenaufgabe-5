@@ -7,7 +7,7 @@ while True:
     eingabe = input("Bitte geben Sie ein Wort ein: ")
 
     if not eingabe:
-        print("Fehler: Die Eingabe darf nicht leer sein. Bitte versuchen Sie es erneut.")
+        print("Fehler: Das Programm prüft nur bei Eingabe auf Palindrom. Bitte versuchen Sie es erneut.")
         continue
 
     if ist_palindrom(eingabe):
