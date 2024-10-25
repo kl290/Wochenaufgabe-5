@@ -1,12 +1,15 @@
-def woerter_zaehlen():
+def eingabe():
     satz = input("Bitte einen Satz eingeben: ").strip()
 
-    if not satz:
-        print("Fehler: Sie haben keinen gültigen Satz eingegeben. Bitte erneut versuchen.")
-        return woerter_zaehlen()
-    woerter = satz.split()
+    return satz.split()
 
-    print(f"Der Satz enthält {len(woerter)} Wörter.")
+
+def woerter_zaehlen():
+    wort_liste = eingabe()
+
+    woerter_anzahl = len(wort_liste)
+
+    print(f"Der Satz enthält {woerter_anzahl} Wörter.")
 
 
 woerter_zaehlen()
