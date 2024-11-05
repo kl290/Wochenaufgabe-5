@@ -19,4 +19,5 @@ def woerter_zaehlen():
     print("Häufigkeit der Wörter und Zahlen:", haeufigkeit)
 
 
+
 woerter_zaehlen()
